@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import { isValidEmail } from "./validation"; describe("isValidEmail", () => { it("should validate emails correctly", () => { expect(isValidEmail("test@example.com")).toBe(true); expect(isValidEmail("invalid")).toBe(false); }); });

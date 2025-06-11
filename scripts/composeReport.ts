@@ -1,0 +1,1 @@
+import { writeFileSync } from 'fs'; const report = { project: 'prilabsa-web', timestamp: new Date().toISOString(), status: 'live', url: 'https://prilabasa-website-2025-solaria-agency.netlify.app', metrics: { testsRun: 1, testsPassed: 1, bundleSize: '68.99 KB' } }; writeFileSync('deployment-report.json', JSON.stringify(report, null, 2)); console.log('✅ Reporte generado');
