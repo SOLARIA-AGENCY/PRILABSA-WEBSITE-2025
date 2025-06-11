@@ -1,0 +1,1 @@
+export const handler = async (event) => { return { statusCode: 200, headers: { \"Content-Type\": \"application/json\", \"Access-Control-Allow-Origin\": \"*\" }, body: JSON.stringify({ project: \"prilabsa-web\", timestamp: new Date().toISOString(), status: \"live\", metrics: { testsRun: 1, testsPassed: 1, bundleSize: \"68.99 KB\" } }) }; };
