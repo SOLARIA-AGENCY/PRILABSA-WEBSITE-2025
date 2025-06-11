@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prilabsa</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<!-- Font Awesome 5 Free is used in the design. Please include its CSS link here. Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.header-section {
+  /* style_1045 -> style_35 -> display: flex; justify-content: center; align-items: center; */
+  /* style_89 for 14:1046 -> display: flex; flex-direction: row; padding-top: 10px; padding-bottom: 10px; */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility on hero */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 0; /* from style_89 */
+}
+.site-header {
+  /* Based on 14:1045 and its children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container {
+  /* Based on 14:1046, max-width 1140px, display: flex, align-items: center */
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Standard padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* To space out logo, nav, lang */
+  box-sizing: border-box;
+}
+.logo-container {
+  /* style_90 for 14:1047 */
+  padding: 10px; /* from style_90 */
+}
+.logo-img {
+  /* I14:1051;14:577 - width: 150, height: 58.02 */
+  width: 150px;
+  height: auto;
+}
+.main-navigation {
+  /* style_92 for 14:1056 */
+  display: flex;
+  justify-content: center;
+  padding: 10px; /* from style_92 */
+}
+.nav-list {
+  /* style_93 for 14:1060 */
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* from style_93 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.nav-item {
+  /* style_94 for item */
+  display: flex;
+  justify-content: center;
+}
+.nav-link {
+  /* style_95 for component 5 */
+  padding: 15px 7px; /* from style_95 */
+  font-size: 16px; /* from style_98, style_99 etc. */
+  line-height: 26px; /* from style_98, style_99 etc. */
+  color: #ffffff; /* from style_99, style_100 etc. */
+  font-weight: 400; /* from style_98, style_99 etc. */
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+.nav-link-inicio {
+  color: #ee7800; /* style_96 */
+}
+.dropdown-arrow {
+  font-family: "Font Awesome 5 Free", sans-serif; /* style_103 */
+  font-weight: 900; /* style_103 */
+  font-size: 14px; /* style_103 */
+  margin-left: 5px;
+}
+.language-selector {
+  /* style_104 for 14:1081 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* from style_104 */
+  /* style_106 for 14:1086 */
+  border-radius: 2px;
+  overflow: hidden;
+  gap: 8px; /* Visual estimate */
+}
+.lang-flag {
+  /* 14:1090 - width: 20, height: 15 */
+  width: 20px;
+  height: 15px;
+}
+.lang-text {
+  /* style_110 */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11.4375px;
+  line-height: 12px;
+}
+.lang-arrow {
+  /* 14:1618 - width: 11, height: 11 */
+  width: 11px;
+  height: 11px;
+}
+
+@media (max-width: 992px) {
+  .main-navigation {
+    display: none; /* Basic responsive: hide nav, implement burger later */
+  }
+  .language-selector {
+    margin-left: auto;
+  }
+  .header-container {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 10px;
+    }
+    .logo-img {
+        width: 120px;
+    }
+}
+
+/* CSS for section section:hero */
+.hero-section {
+  /* Based on 14:745 and style_3 */
+  min-height: 800px; /* Or use height: 100vh or specific height from design 1200px */
+  height: 100vh; /* Full viewport height */
+  max-height: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* To stack main-text and secondary-text if needed, or manage padding */
+  justify-content: center; /* Vertically center content */
+  padding: 50px; /* General padding from style_3, adjust as needed */
+  box-sizing: border-box;
+  background-image: url('images/f15ec02f9e7ff82d49be3f3ad67776f016e1e275.png'); /* Fallback for video or main bg */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff; /* Default text color for hero */
+  overflow: hidden;
+}
+.hero-background-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Behind content */
+}
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* style_5 background-size: cover */
+}
+.hero-content-container {
+    /* Based on 14:749, 14:756, 14:757 and their layout within 14:745 */
+    /* style_3 on 14:745 has display:flex, flex-direction:column, justify-content:center, gap:20px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This should center the block of text */
+    gap: 20px; /* from style_3 */
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1140px; /* Align with other sections */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 0 20px; /* Consistent padding */
+    box-sizing: border-box;
+    height: 100%; /* Take full height of parent to allow flex alignment */
+}
+
+.hero-main-text {
+  /* Based on 14:751 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px; /* from style_7 */
+}
+.hero-title {
+  /* style_8 for 14:753 */
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1; /* Adjusted from 70px to be relative */
+  text-align: left;
+}
+.hero-subtitle-highlight {
+  /* style_9 for 14:755 */
+  color: #e17e01;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1; /* Adjusted from 70px */
+  text-align: left;
+}
+.hero-secondary-text {
+  /* Based on 14:758 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* To match "VER" link on the right */
+  gap: 14.39px; /* from style_12 */
+  margin-top: 50px; /* Spacing from main text, adjust as needed */
+}
+.hero-tagline {
+  /* style_14 for 14:761 */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 25.8984375px;
+  line-height: 35px;
+  text-align: right;
+}
+.hero-cta-link {
+  /* style_16 for I14:763;14:600 */
+  color: #e17e01;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block; /* For proper alignment */
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 20px;
+    text-align: center; /* Center text on mobile */
+  }
+  .hero-content-container {
+    align-items: center; /* Center content horizontally */
+  }
+  .hero-title, .hero-subtitle-highlight {
+    font-size: 40px; /* Smaller font for mobile */
+    text-align: center;
+  }
+  .hero-tagline, .hero-cta-link {
+    font-size: 20px;
+    text-align: center;
+  }
+  .hero-secondary-text {
+    align-items: center;
+  }
+}
+
+/* CSS for section section:about */
+.about-section {
+  /* style_19 for 14:766 -> display: flex; flex-direction: row; align-items: center; */
+  padding: 60px 0; /* Vertical padding */
+  background-color: #fff; /* Assuming white background */
+}
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically align columns */
+  gap: 30px; /* Space between image and text */
+  max-width: 1140px; /* Standard container */
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.about-image-column {
+  /* Based on 14:767, 14:770, 14:771 */
+  flex: 1; /* Adjust flex properties as needed */
+  max-width: 40%; /* Example width */
+}
+.about-decorative-image {
+  /* style_21 for 14:771 */
+  width: 100%;
+  height: auto;
+}
+.about-text-column {
+  /* Based on 14:772 and style_22 */
+  flex: 1.5; /* Adjust flex properties */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* from style_22 */
+  position: relative; /* For background text */
+}
+.about-heading-container {
+  position: relative; /* For the background "SOMOS" */
+  margin-bottom: 20px; /* Space below heading */
+}
+.about-title-background {
+  /* style_23 for 14:776 */
+  color: rgba(198, 198, 198, 0.3);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 71.484375px;
+  line-height: 75px;
+  text-align: left;
+  position: absolute;
+  top: -50px; /* Adjust to position correctly */
+  left: -30px; /* Adjust to position correctly */
+  z-index: -1;
+  white-space: nowrap;
+}
+.about-paragraphs {
+  /* style_24 for 14:779 */
+  display: flex;
+  flex-direction: column;
+  gap: 14.4px; /* from style_24 */
+}
+.about-paragraphs p {
+  /* Common style from style_25, style_26, etc. */
+  color: #3759c1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px; /* Average from various styles */
+  line-height: 24px;
+  text-align: left;
+}
+.about-cta-button {
+  /* style_31 for 14:799 */
+  border: 2px solid #3759c1;
+  display: inline-flex; /* Changed from flex to inline-flex */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 26px;
+  border-radius: 20px;
+  text-decoration: none;
+  gap: 15px; /* from style_32 */
+  align-self: flex-start; /* Align button to the left */
+  margin-top: 20px;
+}
+.about-cta-button span {
+  /* style_33 for 14:802 */
+  color: #3759c1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14.296875px;
+  line-height: 15px;
+  text-align: center;
+}
+.about-cta-button img {
+  /* 14:805 SVG */
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image-column {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  .about-text-column {
+    align-items: center;
+  }
+  .about-title-background {
+    font-size: 50px;
+    position: static; /* Or adjust positioning for mobile */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .about-paragraphs p {
+    text-align: center;
+  }
+  .about-cta-button {
+    align-self: center;
+  }
+}
+
+/* CSS for section section:products */
+.products-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light gray background */
+}
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* For the border effect */
+}
+.product-category-item {
+  /* style_38 for HorizontalBorder */
+  border: 1px solid #3759c1;
+  padding: 15px 20px; /* from style_39, style_49, style_52 */
+  background-color: #fff;
+}
+.product-category-header {
+  /* style_39, style_49, style_52 -> display: flex; flex-direction: row; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px; /* Visual estimate */
+}
+.product-category-icon {
+  /* SVGs like I14:817;14:680 */
+  width: 16px;
+  height: 16px;
+}
+.product-category-title-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.product-title-background {
+  /* style_42 for faded text */
+  color: rgba(198, 198, 198, 0.3);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 1; /* Adjusted from 66px */
+  text-align: left;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  white-space: nowrap;
+}
+.product-title-main {
+  /* style_43, style_51 for main text */
+  color: #e17e01; /* Default to ALIMENTOS color, others are #3759c1 */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1; /* Adjusted from 50px */
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+/* Specific main title colors if different */
+.product-category-item:nth-child(n+2) .product-title-main { /* For PROBIÓTICOS, ADITIVOS etc. */
+  color: #3759c1; /* style_51 */
+}
+
+.product-category-content {
+  /* style_44 for Region */
+  border-top: 1px solid #3759c1; /* Simulating the nested border */
+  margin-top: 15px;
+  padding-top: 17px; /* from style_44 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10.4px; /* from style_44 */
+  text-align: center;
+}
+.product-category-content p {
+  /* style_45 for 14:828 */
+  color: #7a7a7a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 13.5px;
+  line-height: 24px;
+}
+.product-cta-button {
+  /* style_46 for 14:830 */
+  border: 2px solid #3759c1;
+  display: inline-flex;
+  align-items: center;
+  padding: 3.5px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  gap: 5px; /* Visual estimate */
+}
+.product-cta-button span:first-child {
+  /* style_47 for I14:830;14:570 */
+  color: #3759c1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: 24px;
+}
+.product-cta-arrow {
+  /* style_48 for I14:830;14:571 */
+  color: #3759c1;
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@media (max-width: 768px) {
+  .product-category-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .product-title-background {
+    font-size: 35px;
+    position: static;
+    transform: none;
+    text-align: left;
+  }
+  .product-title-main {
+    font-size: 30px;
+    text-align: left;
+  }
+}
+
+/* CSS for section section:agencies */
+.agencies-section {
+  /* style_56 for 14:878 */
+  background-color: rgba(198, 198, 198, 0.3);
+  padding: 80px 0; /* from style_57 padding-top/bottom */
+}
+.agencies-container {
+  /* style_57 for 14:879 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px; /* Visual estimate */
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.agencies-text-column {
+  /* Based on 14:880 */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Visual estimate from structure */
+  color: #3759c1; /* Default from paragraphs */
+}
+.agencies-title {
+  /* style_59 for 14:884 */
+  color: #ffffff; /* This is white on the gray background */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 73.53515625px;
+  line-height: 1; /* Adjusted from 75px */
+  text-align: left;
+}
+.agencies-paragraphs p {
+  /* style_60, style_30, style_26 */
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px; /* Average */
+  line-height: 24px;
+  text-align: left;
+  color: #3759c1; /* Overriding section default for these specific paragraphs */
+}
+.agencies-cta-button {
+  /* style_31 for 14:898 */
+  border: 2px solid #3759c1;
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 26px;
+  border-radius: 20px;
+  text-decoration: none;
+  gap: 15px; /* from style_32 */
+  align-self: flex-start;
+  margin-top: 10px;
+}
+.agencies-cta-button span {
+  /* style_33 for 14:901 */
+  color: #3759c1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14.296875px;
+  line-height: 15px;
+}
+.agencies-cta-button img {
+  /* 14:903 SVG */
+  width: 15px;
+  height: 15px;
+}
+.agencies-image-column {
+  flex: 1;
+}
+.agencies-image-column img {
+  width: 100%;
+  height: 355px; /* from 14:906 height */
+  object-fit: cover;
+  border-radius: 8px; /* Optional styling */
+}
+
+@media (max-width: 768px) {
+  .agencies-container {
+    flex-direction: column-reverse; /* Image first on mobile */
+    text-align: center;
+  }
+  .agencies-text-column {
+    align-items: center;
+  }
+  .agencies-title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .agencies-paragraphs p {
+    text-align: center;
+  }
+  .agencies-cta-button {
+    align-self: center;
+  }
+}
+
+/* CSS for section section:brands */
+.brands-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+.brands-title {
+  /* style_62 for 14:918 */
+  color: #3759c1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 27.5625px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.brands-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.brands-carousel {
+  /* style_63 for 14:922 */
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Basic scroll, JS needed for true carousel */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  gap: 30px; /* Spacing between logos */
+  padding: 10px 0; /* Padding for scrollbar visibility if not hidden */
+  width: 100%;
+  justify-content: flex-start; /* Align items to start */
+}
+.brands-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+.brand-logo-item {
+  /* Each FRAME like 14:931, 14:934 etc. has width: 376, height: 376 */
+  /* The actual logos are smaller. Let's set a max-width/height for logos */
+  flex: 0 0 auto; /* Prevent shrinking, allow scrolling */
+  width: 150px; /* Adjust based on actual logo sizes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-logo-item img {
+  max-width: 100%;
+  max-height: 80px; /* Control logo height */
+  object-fit: contain;
+}
+.carousel-arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.carousel-arrow img {
+    width: 25px;
+    height: 25px;
+}
+.prev-arrow {
+  left: -40px; /* Adjust position */
+}
+.next-arrow {
+  right: -40px; /* Adjust position */
+}
+
+@media (max-width: 768px) {
+  .brand-logo-item {
+    width: 120px;
+  }
+  .carousel-arrow {
+    display: none; /* Hide arrows on mobile, rely on swipe/scroll */
+  }
+  .brands-carousel {
+    padding-left: 20px; /* Ensure first item is not cut off */
+    padding-right: 20px; /* Ensure last item is not cut off */
+  }
+}
+
+/* CSS for section section:footer */
+.site-footer {
+  /* style_71 for background */
+  background-color: #3759c1;
+  color: #ffffff;
+  padding-top: 10px; /* from 14:977 */
+  padding-bottom: 10px; /* from 14:977 */
+}
+.footer-top-spacer {
+  /* Simulates 14:974, 14:975, 14:976 */
+  height: 50px; /* From 14:976 height */
+  /* border-bottom: 1px solid #ffffff; from style_72 on 14:979 */
+  max-width: 1140px;
+  margin: 0 auto 10px auto; /* 10px from 14:978 padding-top/bottom */
+}
+.footer-content-container {
+  /* style_73 for 14:980 */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px; /* from style_73 */
+  padding-top: 10px; /* from style_73 */
+  padding-bottom: 10px; /* from style_73 */
+  border-top: 1px solid #ffffff; /* from style_72 on 14:979 */
+  flex-wrap: wrap; /* For responsiveness */
+}
+.footer-column {
+  /* Based on 14:981, 14:987, 14:1001, 14:1011 */
+  /* style_75 for inner containers */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adjusted from 20px in style_75 for tighter content */
+  padding: 10px; /* from style_75 */
+  flex: 1;
+  min-width: 220px; /* Ensure columns don't get too narrow */
+}
+.footer-logo-column {
+  justify-content: center; /* Align logo */
+}
+.footer-logo {
+  /* 14:986 - width: 136, height: 52 */
+  width: 136px;
+  height: auto;
+}
+.footer-heading {
+  /* style_76, style_81, style_82 */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px; /* Average */
+  line-height: 1.2; /* Adjusted from 15px */
+  text-align: left;
+  margin-bottom: 5px; /* Small space below heading */
+}
+.footer-text {
+  /* style_77, style_79 */
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px; /* Average */
+  line-height: 18px;
+  text-align: left;
+}
+.footer-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.footer-link-domain {
+  /* style_80 for .ec */
+  font-size: 9.75px;
+}
+.social-media-list {
+  /* style_63 for 14:1019 */
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 16px; /* (47.25 item:margin width - 31.25 item width) / 2 for padding on each side * 2 */
+}
+.social-media-list li a img {
+  /* SVGs like 14:1024 */
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 992px) {
+  .footer-content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    align-items: center;
+  }
+  .footer-heading, .footer-text {
+    text-align: center;
+  }
+  .social-media-list {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+    .footer-column {
+        min-width: 100%;
+    }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-header" class="header-section">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="#">
+          <img src="images/af297cf3944f228929a126fab0561a1e05dc83d9.png" alt="Prilabsa Logo" class="logo-img">
+        </a>
+      </div>
+      <nav class="main-navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#section-hero" class="nav-link nav-link-inicio">INICIO</a></li>
+          <li class="nav-item"><a href="#section-about" class="nav-link">QUIENES SOMOS</a></li>
+          <li class="nav-item"><a href="#section-agencies" class="nav-link">OFICINAS</a></li>
+          <li class="nav-item"><a href="#section-products" class="nav-link">PRODUCTOS</a></li>
+          <li class="nav-item nav-item-dropdown">
+            <a href="#section-footer" class="nav-link">CONTÁCTANOS <span class="dropdown-arrow"></span></a>
+            <!-- Dropdown menu can be added here if needed -->
+          </li>
+        </ul>
+      </nav>
+      <div class="language-selector">
+        <img src="images/14_1090.svg" alt="Language Flag ES" class="lang-flag">
+        <span class="lang-text">es</span>
+        <img src="images/14_1618.svg" alt="Dropdown Arrow" class="lang-arrow">
+      </div>
+    </div>
+  </header>
+</section>
+<section id="section-hero" class="hero-section">
+  <div class="hero-background-video-container">
+    <!-- Node 14:748 PRILABSA_INICIO_VIDEO_BG_v3.mp4, style_5 has imageSrc -->
+    <video autoplay loop muted playsinline poster="images/1782d775edd73808855adf6ad6331c2fb21b948b.png" class="hero-video">
+      <source src="images/PRILABSA_INICIO_VIDEO_BG_v3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="hero-content-container">
+    <div class="hero-main-text">
+      <h1 class="hero-title">Somos proveedores de<br>las mejores soluciones<br>integrales en</h1>
+      <p class="hero-subtitle-highlight">ALIMENTOS</p>
+    </div>
+    <div class="hero-secondary-text">
+      <p class="hero-tagline">Sirviendo a las Américas<br>por más de 32 años.</p>
+      <a href="#" class="hero-cta-link">VER</a>
+    </div>
+  </div>
+</section>
+<section id="section-about" class="about-section">
+  <div class="about-container">
+    <div class="about-image-column">
+      <img src="images/f75f51928f9818e7a4db3a2f0638ed8b9df4887c.png" alt="Decorative geometric shapes" class="about-decorative-image">
+    </div>
+    <div class="about-text-column">
+      <div class="about-heading-container">
+        <h2 class="about-title-background">SOMOS</h2>
+        <!-- The main "SOMOS" title is visually part of the design but not explicitly in the text block in Figma as a primary heading -->
+      </div>
+      <div class="about-paragraphs">
+        <p>Prilabsa es una empresa multinacional fundada en el año 1992, dedicándose a la comercialización de alimentos, probióticos, aditivos, equipos y químicos con altos estándares de calidad.</p>
+        <p>Prilabsa ha podido cubrir todas las necesidades de los laboratorios de camarón, peces y camaroneras, gracias al pleno conocimiento del medio ambiente y la sólida experiencia con nuestro personal capacitado en varios mercados de la industria acuícola.</p>
+        <p>Prilabsa ha expandido sus actividades en países establecidos como puntos estratégicos del continente americano, contando con oficinas comerciales y bodegas climatizadas en Ecuador (Guayaquil, Manta, Pedernales, San Vicente, Ponce Enríquez, Hualtaco, Machala, Esmeraldas, Libertad), USA (Miami), México (Mazatlán), Brasil (Natal y Aracati), Honduras (Choluteca), Panamá (Ciudad de Panamá), Nicaragua (Chinandega), Venezuela (Maracaibo) y Perú (Tumbes).</p>
+        <p>Contamos con mas de 32 años de experiencia y servicio dentro del sector, lo que evidencia que la excelencia no se improvisa, se consolida a través de la eficiencia de cada uno de nuestro equipo de trabajo. Llegando así a convertirnos en la solución integral del sector acuícola en las Américas.</p>
+      </div>
+      <a href="#" class="about-cta-button">
+        <span>CONOCE MÁS</span>
+        <img src="images/14_805.svg" alt="Arrow right">
+      </a>
+    </div>
+  </div>
+</section>
+<section id="section-products" class="products-section">
+  <div class="container">
+    <div class="products-grid">
+      <!-- ALIMENTOS -->
+      <div class="product-category-item">
+        <div class="product-category-header">
+          <img src="images/I14_817_14_680.svg" alt="" class="product-category-icon">
+          <div class="product-category-title-container">
+            <h3 class="product-title-background">ALIMENTOS</h3>
+            <h3 class="product-title-main">ALIMENTOS</h3>
+          </div>
+        </div>
+        <div class="product-category-content">
+          <p>Revisa nuestro catálogo de productos de Alimentos aquí</p>
+          <a href="#" class="product-cta-button">
+            <span>Ver más</span>
+            <span class="product-cta-arrow"></span> <!-- Font Awesome icon -->
+          </a>
+        </div>
+      </div>
+      <!-- PROBIÓTICOS -->
+      <div class="product-category-item">
+        <div class="product-category-header">
+          <img src="images/I14_836_14_617.svg" alt="" class="product-category-icon">
+          <div class="product-category-title-container">
+            <h3 class="product-title-background">PROBIÓTICOS</h3>
+            <h3 class="product-title-main">PROBIÓTICOS</h3>
+          </div>
+        </div>
+        <!-- Content for PROBIÓTICOS if available, or remove this div -->
+      </div>
+      <!-- ADITIVOS -->
+      <div class="product-category-item">
+        <div class="product-category-header">
+          <img src="images/I14_846_14_635.svg" alt="" class="product-category-icon">
+          <div class="product-category-title-container">
+            <h3 class="product-title-background">ADITIVOS</h3>
+            <h3 class="product-title-main">ADITIVOS</h3>
+          </div>
+        </div>
+      </div>
+      <!-- QUÍMICOS -->
+      <div class="product-category-item">
+        <div class="product-category-header">
+          <img src="images/I14_856_14_653.svg" alt="" class="product-category-icon">
+          <div class="product-category-title-container">
+            <h3 class="product-title-background">QUÍMICOS</h3>
+            <h3 class="product-title-main">QUÍMICOS</h3>
+          </div>
+        </div>
+      </div>
+      <!-- EQUIPOS -->
+      <div class="product-category-item">
+        <div class="product-category-header">
+          <img src="images/I14_866_14_671.svg" alt="" class="product-category-icon">
+          <div class="product-category-title-container">
+            <h3 class="product-title-background">EQUIPOS</h3>
+            <h3 class="product-title-main">EQUIPOS</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-agencies" class="agencies-section">
+  <div class="agencies-container">
+    <div class="agencies-text-column">
+      <h2 class="agencies-title">NUESTRAS<br>AGENCIAS</h2>
+      <div class="agencies-paragraphs">
+        <p>Hemos expandido nuestras actividades en países establecidos como puntos estratégicos del continente Americano, contando con oficinas comerciales modernas y bodegas climatizadas.</p>
+      </div>
+      <a href="#" class="agencies-cta-button">
+        <span>CONOCE MÁS</span>
+        <img src="images/14_903.svg" alt="Arrow right">
+      </a>
+    </div>
+    <div class="agencies-image-column">
+      <!-- Rectangle 14:906 is a placeholder, use a representative image or background color -->
+      <img src="images/placeholder-agencies.png" alt="Our Agencies Network">
+    </div>
+  </div>
+</section>
+<section id="section-brands" class="brands-section">
+  <div class="container">
+    <h3 class="brands-title">NUESTRAS MARCAS</h3>
+    <div class="brands-carousel-wrapper">
+      <button class="carousel-arrow prev-arrow" aria-label="Previous brand"><img src="images/14_968.svg" alt="Previous"></button>
+      <div class="brands-carousel">
+        <div class="brand-logo-item"><img src="images/4b70dcae518ee387ddfbd4a8d6a8d96df812e3da.png" alt="API"></div>
+        <div class="brand-logo-item"><img src="images/95838773a2d4da480768bf2f8832d5161751875d.png" alt="Argent"></div>
+        <div class="brand-logo-item"><img src="images/43a4c27d2dede047c9188ed3e0fe7f633c3c15de.png" alt="BASF"></div>
+        <div class="brand-logo-item"><img src="images/201458f75d8d7aa60f640b18a42215faf3c7c914.png" alt="DSM"></div>
+        <div class="brand-logo-item"><img src="images/2d8b016da136146129fdbb5490edfd8c265e71c7.png" alt="Gast"></div>
+        <!-- Add more brands if they were in the Figma data for 14:922 -->
+      </div>
+      <button class="carousel-arrow next-arrow" aria-label="Next brand"><img src="images/14_971.svg" alt="Next"></button>
+    </div>
+  </div>
+</section>
+<footer id="section-footer" class="site-footer">
+  <div class="footer-top-spacer"></div>
+  <div class="footer-content-container container">
+    <div class="footer-column footer-logo-column">
+      <img src="images/654a55f871f18407150d4de78d11baca12600c80.png" alt="Prilabsa Logo White" class="footer-logo">
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-heading">CONTÁCTANOS</h4>
+      <p class="footer-text">Para más información<br>escríbenos a: 
+        <a href="mailto:info@prilabsa.com.ec" class="footer-link">info@prilabsa.com<span class="footer-link-domain">.ec</span></a>
+      </p>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-heading">UBICACIÓN</h4>
+      <p class="footer-text">Av. Carlos Julio Arosemena, km 2 1/2, C.C. Albán<br>Borja, local #55.<br>Guayaquil – Ecuador</p>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-heading">¡SÍGUENOS!</h4>
+      <ul class="social-media-list">
+        <li><a href="#" aria-label="Facebook"><img src="images/14_1024.svg" alt="Facebook"></a></li>
+        <li><a href="#" aria-label="Instagram"><img src="images/14_1031.svg" alt="Instagram"></a></li>
+        <li><a href="#" aria-label="LinkedIn"><img src="images/14_1038.svg" alt="LinkedIn"></a></li>
+      </ul>
+    </div>
+  </div>
+  <a href="https://wa.me/YOURNUMBER" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <img src="images/19240200c1e386aa184f15294df61b6925719c61.png" alt="WhatsApp">
+  </a>
+</footer>
+</body>
+</html>
