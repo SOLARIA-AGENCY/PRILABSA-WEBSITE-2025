@@ -3,32 +3,71 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "description": "Prilabsa Corporate Website 2025 - Built with Solaria Agency Framework",
+  "keywords": [
+    "prilabsa",
+    "corporate-website",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss"
+  ],
+  "author": {
+    "name": "Prilabsa",
+    "email": "info@prilabsa.com",
+    "url": "https://prilabsa.com"
+  },
+  "homepage": "https://prilabsa.com",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "compose:report": "tsx scripts/composeReport.ts"
+    "test:coverage": "vitest run --coverage --reporter=json",
+    "test:run": "vitest run",
+    "lint": "eslint . --format json",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "audit:security": "npm audit --audit-level critical --json",
+    "compose:report": "tsx scripts/composeReport.ts",
+    "predeploy": "npm run test:coverage && npm run lint && npm run audit:security && npm run compose:report && npm run build",
+    "deploy": "npm run predeploy && echo 'Deployment ready with complete metrics'"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.17.0",
     "@types/react-router-dom": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@netlify/functions": "^4.1.2",
     "@testing-library/jest-dom": "^6.1.3",
     "@testing-library/react": "^14.0.0",
+    "@types/node": "^22.15.31",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "autoprefixer": "^10.4.16",
+    "cypress": "^13.6.0",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
     "jsdom": "^26.1.0",
     "postcss": "^8.4.34",
     "tailwindcss": "^3.4.4",
     "tsx": "^4.20.1",
     "typescript": "^5.3.3",
+    "typescript-eslint": "^8.30.1",
     "vite": "^5.1.4",
-    "vitest": "^1.4.0"
+    "vitest": "^1.6.0"
   }
 }

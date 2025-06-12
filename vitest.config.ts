@@ -6,6 +6,32 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './vitest.setup.ts'
+    setupFiles: ['./vitest.setup.ts'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+      exclude: [
+        'node_modules/',
+        'dist/',
+        'coverage/',
+        '**/*.d.ts',
+        '**/*.config.{js,ts,cjs}',
+        '**/main.tsx',
+        '**/vite-env.d.ts',
+        'scripts/**',
+        'tailwind.config.cjs',
+        'eslint.config.js',
+        'vitest.config.ts',
+        'vite.config.ts'
+      ],
+      thresholds: {
+        global: {
+          branches: 80,
+          functions: 80,
+          lines: 80,
+          statements: 80
+        }
+      }
+    }
   }
 }); 
