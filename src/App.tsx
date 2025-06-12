@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage'
+import { HomePage } from './pages/HomePage'
 import DeployDashboard from './pages/DeployDashboard'
 import Website2025 from './pages/Website2025'
 
