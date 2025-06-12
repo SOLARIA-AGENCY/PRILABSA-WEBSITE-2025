@@ -4,27 +4,8 @@ import React from 'react';
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Menu */}
-      <nav className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-xl font-bold font-montserrat text-gray-900">
-              PRILABSA
-            </div>
-            <div className="flex space-x-8">
-              <a href="/" className="text-gray-900 font-montserrat font-semibold border-b-2 border-blue-600">
-                🌐 Website 2025
-              </a>
-              <a href="/dashboard" className="text-gray-600 hover:text-gray-800 font-montserrat font-semibold transition-colors">
-                📊 Métricas de Despliegue
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Main Content - PRILABSA Centered */}
-      <div className="flex-1 flex items-center justify-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
+      <div className="flex-1 flex items-center justify-center min-h-screen">
         <div className="text-center">
           <h1 className="text-8xl font-montserrat font-bold text-gray-900 mb-4 tracking-wider">
             PRILABSA
@@ -32,12 +13,18 @@ const HomePage: React.FC = () => {
           <p className="text-xl font-montserrat text-gray-600 mb-8">
             Proveedores de soluciones integrales en alimentos - Versión 2025
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center space-x-6">
+            <a 
+              href="/website" 
+              className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-montserrat font-semibold shadow-lg text-lg"
+            >
+              🌐 Website 2025
+            </a>
             <a 
               href="/dashboard" 
               className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-montserrat font-semibold shadow-lg text-lg"
             >
-              📊 Ver Métricas de Despliegue
+              📊 Métricas Despliegue y Auditoría
             </a>
           </div>
         </div>

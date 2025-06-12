@@ -255,11 +255,11 @@ const DeployDashboard: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 font-montserrat">Métricas de Despliegue</h1>
-              <p className="text-lg text-gray-600 font-montserrat">PRILABSA-WEBSITE-2025 - Auditoría de Seguridad</p>
+              <h1 className="text-4xl font-bold text-gray-900 font-montserrat">Métricas Despliegue y Auditoría</h1>
+              <p className="text-xl text-gray-600 font-montserrat mt-2">PRILABSA-WEBSITE-2025 - Auditoría de Seguridad</p>
             </div>
             <div className="text-right">
               <div className="inline-flex items-center px-4 py-2 rounded-full text-lg font-bold font-montserrat bg-green-100 text-green-800 border-2 border-green-200">
@@ -270,20 +270,22 @@ const DeployDashboard: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Navigation Menu */}
-      <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-6">
-          <nav className="flex space-x-8 py-4">
-            <a href="/" className="text-blue-600 hover:text-blue-800 font-montserrat font-semibold transition-colors">
+          
+          {/* Navigation Buttons */}
+          <div className="mt-6 flex space-x-4">
+            <a 
+              href="/" 
+              className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-montserrat font-semibold"
+            >
+              🏠 Inicio
+            </a>
+            <a 
+              href="/website" 
+              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-montserrat font-semibold"
+            >
               🌐 Website 2025
             </a>
-            <a href="/dashboard" className="text-gray-900 font-montserrat font-semibold border-b-2 border-blue-600">
-              📊 Métricas de Despliegue
-            </a>
-          </nav>
+          </div>
         </div>
       </div>
 
