@@ -3,7 +3,7 @@
 
 [build]
   publish = "dist"
-  command = "npm run deploy"
+  command = "npm run test:run && npm run lint && npm run build"
   
 # Build optimization flags
 [build.environment]
@@ -77,10 +77,10 @@
   status = 200
 
 [context.production]
-  command = "npm run deploy"
+  command = "npm run test:run && npm run lint && npm run build"
 
 [context.deploy-preview]
-  command = "npm run deploy"
+  command = "npm run test:run && npm run lint && npm run build"
 
 [context.branch-deploy]
-  command = "npm run deploy"
+  command = "npm run test:run && npm run lint && npm run build"

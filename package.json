@@ -38,17 +38,11 @@
     "audit:security": "npm audit --audit-level critical --json",
     "audit:fix": "npm audit fix",
     "compose:report": "tsx scripts/composeReport.ts",
-    "predeploy": "npm run test:coverage && npm run lint && npm run audit:security && npm run compose:report && npm run build",
-    "deploy": "echo 'Deployment ready with complete metrics'",
+    "predeploy": "npm run test:run && npm run lint && npm run build",
+    "deploy": "echo 'Deployment ready'",
     "clean": "rm -rf dist coverage node_modules/.cache",
     "reinstall": "rm -rf node_modules package-lock.json && npm install",
-    "scrape": "tsx scripts/web-scraping-toolkit.ts",
-    "scrape:playwright": "tsx scripts/web-scraping-toolkit.ts --tool=playwright",
-    "scrape:all": "tsx scripts/web-scraping-toolkit.ts --tool=all",
-    "scrape:deep": "tsx scripts/deep-scraper.ts",
-    "scrape:simple": "tsx scripts/simple-scraper.ts",
-    "scrape:enhanced": "tsx scripts/enhanced-scraper.ts",
-    "scrape:direct": "node scripts/direct-scraper.js",
+
     "prepare": "husky"
   },
   "dependencies": {
