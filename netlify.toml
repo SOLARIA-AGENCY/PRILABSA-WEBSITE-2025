@@ -7,9 +7,11 @@
   
 # Build optimization flags
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20.19.2"
   GENERATE_SOURCEMAP = "false"
   CI = "true"
+  # Disable mise warnings for idiomatic version files
+  MISE_SETTINGS_IDIOMATIC_VERSION_FILE_ENABLE_TOOLS = "node"
 
 # Security Headers Implementation
 [[headers]]
@@ -22,93 +24,49 @@
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       img-src 'self' data: https: blob:;
       font-src 'self' https://fonts.gstatic.com;
-      connect-src 'self' https://www.google-analytics.com /.netlify/functions/;
-      frame-src 'none';
-      object-src 'none';
+      connect-src 'self' https://api.prilabsa.com;
+      frame-ancestors 'none';
       base-uri 'self';
       form-action 'self';
-      manifest-src 'self';
-      worker-src 'self';
-      upgrade-insecure-requests;
     '''
     
-    # HSTS - Fuerza HTTPS y previene downgrade attacks
+    # Security Headers Adicionales
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    
+    # HSTS (HTTP Strict Transport Security)
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     
-    # Previene MIME type sniffing
-    X-Content-Type-Options = "nosniff"
-    
-    # Previene clickjacking
-    X-Frame-Options = "DENY"
-    
-    # XSS Protection (legacy pero recomendado)
-    X-XSS-Protection = "1; mode=block"
-    
-    # Controla información de referrer
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    
-    # Permissions Policy - Controla APIs del navegador
-    Permissions-Policy = '''
-      camera=(),
-      microphone=(),
-      geolocation=(),
-      interest-cohort=(),
-      payment=(),
-      usb=(),
-      vibrate=(),
-      fullscreen=(self)
-    '''
-    
-    # Cache control para HTML
-    Cache-Control = "no-cache, no-store, must-revalidate"
+    # Cache Control para assets estáticos
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Headers específicos para assets estáticos
+# Cache específico para HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cache para archivos CSS y JS
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    # Cache largo para assets con hash
     Cache-Control = "public, max-age=31536000, immutable"
-    
-    # Security headers para assets
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Headers para imágenes
-[[headers]]
-  for = "*.{png,jpg,jpeg,gif,svg,webp,avif}"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-# Headers para fuentes
-[[headers]]
-  for = "*.{woff,woff2,ttf,otf,eot}"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-# Headers para funciones Netlify
-[[headers]]
-  for = "/.netlify/functions/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type, Authorization"
-    Content-Type = "application/json"
-
-# Redirects para SEO y UX
+# Redirects para SEO y compatibilidad
 [[redirects]]
   from = "/home"
   to = "/"
   status = 301
 
-# Error page handling
 [[redirects]]
-  from = "/404"
-  to = "/404.html"
-  status = 404
+  from = "/index.html"
+  to = "/"
+  status = 301
 
-# SPA fallback - DEBE IR AL FINAL para no interceptar funciones Netlify
+# SPA fallback para React Router
 [[redirects]]
   from = "/*"
   to = "/index.html"
