@@ -10,8 +10,7 @@
   NODE_VERSION = "20.19.2"
   GENERATE_SOURCEMAP = "false"
   CI = "true"
-  # Disable mise warnings for idiomatic version files
-  MISE_SETTINGS_IDIOMATIC_VERSION_FILE_ENABLE_TOOLS = "node"
+  NPM_FLAGS = "--silent"
 
 # Security Headers Implementation
 [[headers]]
@@ -30,7 +29,7 @@
       form-action 'self';
     '''
     
-    # Security Headers Adicionales
+    # Security Headers
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
@@ -49,13 +48,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Cache para archivos CSS y JS
+# Cache para assets con hash
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Redirects para SEO y compatibilidad
+# Redirects para SEO
 [[redirects]]
   from = "/home"
   to = "/"
@@ -66,7 +65,7 @@
   to = "/"
   status = 301
 
-# SPA fallback para React Router
+# Fallback para SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
