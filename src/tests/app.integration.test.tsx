@@ -16,17 +16,17 @@ describe('App Integration Tests', () => {
     expect(heading).toBeInTheDocument()
     expect(heading).toHaveTextContent('PRILABSA')
 
-    // Links de navegación - usar getAllBy para múltiples elementos
-    const homeLinks = screen.getAllByRole('link', { name: /inicio/i })
-    const dashboardLinks = screen.getAllByRole('link', { name: /dashboard/i })
+    // Links de navegación actuales - buscar por los nombres reales
+    const websiteLink = screen.getByRole('link', { name: /website 2025/i })
+    const metricsLink = screen.getByRole('link', { name: /métricas despliegue y auditoría/i })
     
-    // Verificar que existen los links
-    expect(homeLinks.length).toBeGreaterThan(0)
-    expect(dashboardLinks.length).toBeGreaterThan(0)
+    // Verificar que los links existen y están en el documento
+    expect(websiteLink).toBeInTheDocument()
+    expect(metricsLink).toBeInTheDocument()
     
-    // Verificar que al menos uno de cada tipo está en el documento
-    expect(homeLinks[0]).toBeInTheDocument()
-    expect(dashboardLinks[0]).toBeInTheDocument()
+    // Verificar que tienen los hrefs correctos
+    expect(websiteLink).toHaveAttribute('href', '/website')
+    expect(metricsLink).toHaveAttribute('href', '/dashboard')
   })
 
   it('loads without console errors', () => {
