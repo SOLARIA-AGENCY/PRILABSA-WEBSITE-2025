@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
-import HomePage from '../pages/HomePage'
+import { HomePage } from '../pages/HomePage'
 
 describe('HomePage', () => {
-  it('renders PRILABSA heading', () => {
+  it('renders hero section heading', () => {
     render(<HomePage />)
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent('PRILABSA')
+    expect(heading).toHaveTextContent('Somos proveedores de')
   })
 
   it('renders without console errors', () => {
