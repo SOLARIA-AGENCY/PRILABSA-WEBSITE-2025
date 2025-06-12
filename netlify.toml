@@ -71,6 +71,11 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/api/v1/deploy-status"
+  to = "/.netlify/functions/deploy-status"
+  status = 200
+
 [context.production]
   command = "npm run deploy"
 
