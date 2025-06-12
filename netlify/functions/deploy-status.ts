@@ -21,7 +21,7 @@ interface DeployMetrics {
  * Redirect configured to: /api/v1/deploy-status
  */
 
-export const handler: Handler = async (event, context) => {
+export const handler: Handler = async (event, _context) => {
   // Headers CORS
   const headers = {
     'Access-Control-Allow-Origin': '*',

@@ -25,7 +25,7 @@ const fetchDeployStatus = async (): Promise<DeployMetrics> => {
     })
     if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`)
     return res.json()
-  } catch (error) {
+  } catch (_error) {
     // Fallback con métricas reales del proyecto
     return {
       timestamp: new Date().toISOString(),
