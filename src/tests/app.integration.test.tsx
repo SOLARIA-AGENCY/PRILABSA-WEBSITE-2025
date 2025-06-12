@@ -11,25 +11,22 @@ describe('App Integration Tests', () => {
   it('renders main heading and navigation links', () => {
     render(<App />)
 
-    // Heading principal del hero section
+    // Heading principal
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent('Somos proveedores de')
+    expect(heading).toHaveTextContent('PRILABSA')
 
-    // Links de navegación del header - usar texto exacto para evitar duplicados
-    const inicioLink = screen.getByRole('link', { name: 'INICIO' })
-    const quienesLink = screen.getByRole('link', { name: 'QUIENES SOMOS' })
-    const productosLink = screen.getByRole('link', { name: 'PRODUCTOS' })
+    // Links de navegación actuales - buscar por los nombres reales
+    const websiteLink = screen.getByRole('link', { name: /website 2025/i })
+    const metricsLink = screen.getByRole('link', { name: /métricas despliegue y auditoría/i })
     
     // Verificar que los links existen y están en el documento
-    expect(inicioLink).toBeInTheDocument()
-    expect(quienesLink).toBeInTheDocument()
-    expect(productosLink).toBeInTheDocument()
+    expect(websiteLink).toBeInTheDocument()
+    expect(metricsLink).toBeInTheDocument()
     
     // Verificar que tienen los hrefs correctos
-    expect(inicioLink).toHaveAttribute('href', '#inicio')
-    expect(quienesLink).toHaveAttribute('href', '#quienes-somos')
-    expect(productosLink).toHaveAttribute('href', '#productos')
+    expect(websiteLink).toHaveAttribute('href', '/website')
+    expect(metricsLink).toHaveAttribute('href', '/dashboard')
   })
 
   it('loads without console errors', () => {

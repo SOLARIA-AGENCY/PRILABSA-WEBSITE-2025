@@ -1,36 +1,44 @@
 import React from 'react';
-import { Header } from '../components/organisms/Header';
-import { HeroSection } from '../components/organisms/HeroSection';
-import { AboutSection } from '../components/organisms/AboutSection';
-import { ProductCategories } from '../components/organisms/ProductCategories';
-import { AgenciesSection } from '../components/organisms/AgenciesSection';
-import { BrandsSection } from '../components/organisms/BrandsSection';
-import { Footer } from '../components/organisms/Footer';
 
 // Force deployment update - cache bust
 export const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header con navegación */}
-      <Header />
-      
-      {/* Hero Section con video background */}
-      <HeroSection />
-      
-      {/* Sección SOMOS */}
-      <AboutSection />
-      
-      {/* Grid de categorías de productos */}
-      <ProductCategories />
-      
-      {/* Sección NUESTRAS AGENCIAS */}
-      <AgenciesSection />
-      
-      {/* Grid de marcas asociadas */}
-      <BrandsSection />
-      
+      {/* Main Content - PRILABSA Centered */}
+      <div className="flex-1 flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="text-8xl font-montserrat font-bold text-gray-900 mb-4 tracking-wider">
+            PRILABSA
+          </h1>
+          <p className="text-xl font-montserrat text-gray-600 mb-8">
+            Proveedores de soluciones integrales en alimentos - Versión 2025
+          </p>
+          <div className="flex justify-center space-x-6">
+            <a 
+              href="/website" 
+              className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-montserrat font-semibold shadow-lg text-lg"
+            >
+              🌐 Website 2025
+            </a>
+            <a 
+              href="/dashboard" 
+              className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-montserrat font-semibold shadow-lg text-lg"
+            >
+              📊 Métricas Despliegue y Auditoría
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Footer */}
-      <Footer />
+      <footer className="bg-gray-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="text-center text-sm text-gray-500 font-montserrat">
+            <p>PRILABSA Website 2025 - Migración fiel y fidedigna</p>
+            <p className="mt-1">Desarrollado por <span className="font-semibold">SOLARIA.AGENCY</span> con tecnología moderna</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

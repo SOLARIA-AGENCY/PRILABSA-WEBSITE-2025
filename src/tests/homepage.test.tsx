@@ -3,11 +3,11 @@ import { describe, it, expect, vi } from 'vitest'
 import { HomePage } from '../pages/HomePage'
 
 describe('HomePage', () => {
-  it('renders hero section heading', () => {
+  it('renders PRILABSA heading', () => {
     render(<HomePage />)
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent('Somos proveedores de')
+    expect(heading).toHaveTextContent('PRILABSA')
   })
 
   it('renders without console errors', () => {
