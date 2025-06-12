@@ -13,18 +13,10 @@ const HomePage: React.FC = () => {
             </div>
             <div className="flex space-x-8">
               <a href="/" className="text-gray-900 font-montserrat font-semibold border-b-2 border-blue-600">
-                🏠 Inicio
+                🌐 Website 2025
               </a>
               <a href="/dashboard" className="text-gray-600 hover:text-gray-800 font-montserrat font-semibold transition-colors">
-                📊 Dashboard
-              </a>
-              <a href="https://github.com/SOLARIA-AGENCY/PRILABSA-WEBSITE-2025" target="_blank" rel="noopener noreferrer" 
-                 className="text-gray-600 hover:text-gray-800 font-montserrat font-semibold transition-colors">
-                📁 Repositorio
-              </a>
-              <a href="https://prilabasa-website-2025-solaria-agency.netlify.app" target="_blank" rel="noopener noreferrer"
-                 className="text-gray-600 hover:text-gray-800 font-montserrat font-semibold transition-colors">
-                🌐 Producción
+                📊 Métricas de Despliegue
               </a>
             </div>
           </div>
@@ -40,20 +32,12 @@ const HomePage: React.FC = () => {
           <p className="text-xl font-montserrat text-gray-600 mb-8">
             Proveedores de soluciones integrales en alimentos - Versión 2025
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center">
             <a 
               href="/dashboard" 
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-montserrat font-semibold shadow-lg"
+              className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-montserrat font-semibold shadow-lg text-lg"
             >
-              Ver Dashboard Técnico
-            </a>
-            <a 
-              href="https://github.com/SOLARIA-AGENCY/PRILABSA-WEBSITE-2025" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-montserrat font-semibold"
-            >
-              Ver Código Fuente
+              📊 Ver Métricas de Despliegue
             </a>
           </div>
         </div>
