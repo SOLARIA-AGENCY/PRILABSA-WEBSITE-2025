@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Force deployment update - cache bust
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
