@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
             PRILABSA
           </h1>
           <p className="text-xl font-montserrat text-gray-600 mb-8">
-            Proveedores de soluciones integrales en alimentos
+            Proveedores de soluciones integrales en alimentos - Versión 2025
           </p>
           <div className="flex justify-center space-x-4">
             <a 
