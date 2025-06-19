@@ -1,37 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
-import PartnerCarousel from '../components/iniciodev/PartnerCarousel';
 
-// Import assets to let Vite handle path resolution
+// Import assets to let Vite handle path resolution - only the ones actually used as variables
 import logoHeader from '/assets/iniciodev/prilabsa_logo_header.png';
 import backgroundVideo from '/assets/iniciodev/background_video.mp4';
 import inicioBgTrim from '/assets/iniciodev/inicio_bg_trim.png';
-import productosAlimentos from '/assets/iniciodev/productos_alimentos.png';
-import productosProbioticos from '/assets/iniciodev/productos_probioticos.png';
-import productosAditivos from '/assets/iniciodev/productos_aditivos.png';
-import productosQuimicos from '/assets/iniciodev/productos_quimicos.png';
-import productosEquipos from '/assets/iniciodev/productos_equipos.png';
-import socioSyaqua from '/assets/iniciodev/socio_syaqua.png';
-import socioBentoli from '/assets/iniciodev/socio_bentoli.png';
-import socioEpicore from '/assets/iniciodev/socio_epicore.png';
-import socioNaturalProducts from '/assets/iniciodev/socio_natural_products.png';
-import socioSyndel from '/assets/iniciodev/socio_syndel.png';
-import socioNovus from '/assets/iniciodev/socio_novus.png';
-import socioApi from '/assets/iniciodev/socio_api.png';
-import socioArgeitit from '/assets/iniciodev/socio_argeitit.png';
-import socioBasf from '/assets/iniciodev/socio_basf.png';
-import socioDms from '/assets/iniciodev/socio_dms.png';
 import iconFacebook from '/assets/iniciodev/icon_facebook.svg';
 import iconInstagram from '/assets/iniciodev/icon_instagram.svg';
 import iconLinkedin from '/assets/iniciodev/icon_linkedin.svg';
 import iconYoutube from '/assets/iniciodev/icon_youtube.svg';
 import logoFooter from '/assets/iniciodev/prilabsa_logo_footer.png';
 
-// Set the app element for accessibility, assuming the root element is '#root'
-// This should ideally be done once in your app's entry point.
-if (typeof window !== 'undefined') {
-  Modal.setAppElement('#root');
-}
+// Modal app element is now configured inside the component useEffect
 
 const InicioDev = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -39,6 +19,22 @@ const InicioDev = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [activeAccordion, setActiveAccordion] = useState('alimentos');
   const [cookiesBannerVisible, setCookiesBannerVisible] = useState(true);
+
+  // Setup react-modal app element when component mounts
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const rootElement = document.getElementById('root');
+      if (rootElement) {
+        Modal.setAppElement('#root');
+      } else {
+        // Fallback for testing environments
+        const bodyElement = document.body;
+        if (bodyElement) {
+          Modal.setAppElement(bodyElement);
+        }
+      }
+    }
+  }, []);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
@@ -63,26 +59,7 @@ const InicioDev = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const products = [
-    { name: 'ALIMENTOS', img: productosAlimentos },
-    { name: 'PROBIÓTICOS', img: productosProbioticos },
-    { name: 'ADITIVOS', img: productosAditivos },
-    { name: 'QUÍMICOS', img: productosQuimicos },
-    { name: 'EQUIPOS', img: productosEquipos },
-  ];
-
-  const partners = [
-    { name: 'SYAQUA', img: socioSyaqua },
-    { name: 'Bentoli', img: socioBentoli },
-    { name: 'Epicore', img: socioEpicore },
-    { name: 'Natural Products', img: socioNaturalProducts },
-    { name: 'Syndel', img: socioSyndel },
-    { name: 'Novus', img: socioNovus },
-    { name: 'API', img: socioApi },
-    { name: 'Argeitit', img: socioArgeitit },
-    { name: 'BASF', img: socioBasf },
-    { name: 'DMS', img: socioDms },
-  ];
+  // Product and partner arrays removed to fix linter errors (data is directly in JSX)
 
   return (
     <>

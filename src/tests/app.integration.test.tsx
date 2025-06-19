@@ -1,32 +1,50 @@
 import { render, screen } from '@testing-library/react'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import App from '../App'
+
+// Mock react-modal completely
+vi.mock('react-modal', () => {
+  const MockModal = ({ children, isOpen }: any) => 
+    isOpen ? <div data-testid="modal">{children}</div> : null;
+  
+  MockModal.setAppElement = vi.fn();
+  
+  return {
+    default: MockModal,
+    setAppElement: vi.fn(),
+  };
+});
 
 /**
  * APP INTEGRATION TESTS
- * Valida que la aplicación se renderice correctamente con la nueva barra de navegación y rutas.
+ * Valida que la aplicación se renderice correctamente con el dashboard como página principal.
  */
 
 describe('App Integration Tests', () => {
-  it('renders main heading and navigation links', () => {
+  beforeEach(() => {
+    // Reset all mocks before each test
+    vi.clearAllMocks()
+  })
+
+  it('renders dashboard heading and navigation links', () => {
     render(<App />)
 
-    // Heading principal
+    // Heading principal del dashboard
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent('PRILABSA')
+    expect(heading).toHaveTextContent('Métricas Despliegue y Auditoría')
 
-    // Links de navegación actuales - buscar por los nombres reales
-    const websiteLink = screen.getByRole('link', { name: /website 2025/i })
-    const metricsLink = screen.getByRole('link', { name: /métricas despliegue y auditoría/i })
+    // Links de navegación reales en el dashboard
+    const homeLink = screen.getByRole('link', { name: /🏠 inicio/i })
+    const websiteLink = screen.getByRole('link', { name: /🌐 website 2025/i })
     
     // Verificar que los links existen y están en el documento
+    expect(homeLink).toBeInTheDocument()
     expect(websiteLink).toBeInTheDocument()
-    expect(metricsLink).toBeInTheDocument()
     
     // Verificar que tienen los hrefs correctos
+    expect(homeLink).toHaveAttribute('href', '/')
     expect(websiteLink).toHaveAttribute('href', '/website')
-    expect(metricsLink).toHaveAttribute('href', '/dashboard')
   })
 
   it('loads without console errors', () => {
