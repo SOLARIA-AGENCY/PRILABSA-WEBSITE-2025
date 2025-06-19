@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import DeployDashboard from './pages/DeployDashboard'
+import MainDashboard from './pages/MainDashboard'
 import PrilabsaWebsite from './pages/PrilabsaWebsite';
 import Website2025 from './pages/Website2025';
 import InicioDev from './pages/iniciodev';
@@ -10,8 +11,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<DeployDashboard />} />
+        <Route path="/" element={<MainDashboard />} />
         <Route path="/iniciodev" element={<InicioDev />} />
+        <Route path="/dashboard" element={<DeployDashboard />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/deploy" element={<DeployDashboard />} />
         <Route path="/prilabsa" element={<PrilabsaWebsite />} />

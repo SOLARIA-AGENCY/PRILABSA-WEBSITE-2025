@@ -17,7 +17,7 @@ vi.mock('react-modal', () => {
 
 /**
  * APP INTEGRATION TESTS
- * Valida que la aplicación se renderice correctamente con el dashboard como página principal.
+ * Valida que la aplicación se renderice correctamente con el nuevo MainDashboard.
  */
 
 describe('App Integration Tests', () => {
@@ -26,25 +26,25 @@ describe('App Integration Tests', () => {
     vi.clearAllMocks()
   })
 
-  it('renders dashboard heading and navigation links', () => {
+  it('renders main dashboard with PRILABSA title and navigation buttons', () => {
     render(<App />)
 
-    // Heading principal del dashboard
+    // Heading principal PRILABSA
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toBeInTheDocument()
-    expect(heading).toHaveTextContent('Métricas Despliegue y Auditoría')
+    expect(heading).toHaveTextContent('PRILABSA')
 
-    // Links de navegación reales en el dashboard
-    const homeLink = screen.getByRole('link', { name: /🏠 inicio/i })
+    // Links de navegación principales
     const websiteLink = screen.getByRole('link', { name: /🌐 website 2025/i })
+    const metricsLink = screen.getByRole('link', { name: /📊 métricas despliegue/i })
     
     // Verificar que los links existen y están en el documento
-    expect(homeLink).toBeInTheDocument()
     expect(websiteLink).toBeInTheDocument()
+    expect(metricsLink).toBeInTheDocument()
     
     // Verificar que tienen los hrefs correctos
-    expect(homeLink).toHaveAttribute('href', '/')
-    expect(websiteLink).toHaveAttribute('href', '/website')
+    expect(websiteLink).toHaveAttribute('href', '/iniciodev')
+    expect(metricsLink).toHaveAttribute('href', '/dashboard')
   })
 
   it('loads without console errors', () => {
